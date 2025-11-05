@@ -17,18 +17,22 @@ const Personlist = () => {
 
   return (
     <div>
-      <h1>จำนวนประชกร {data.length} </h1>
-      <Button onClick={() => setShow(!show)}>{show ? "hide" : "show"}</Button>
-      {show 
-      }
-      <img src={Thlogo} width={100} alt="แผนที่ประเทศไทย" />
-      <div className="flex flex-row gap-2 justify-evenly my-4">
-        
-        <img src={thNlogo} width={100} alt="ภาคเหนือ" /> {/* คุณอาจมีโลโก้ซ้ำ ผมใช้ตามที่คุณ import มานะครับ */}
-        <img src={thMNlogo} width={100} alt="ภาคกลาง" />
-        <img src={thESlogo} width={100} alt="ภาคอีสาน" />
-        <img src={thSSlogo} width={100} alt="ภาคใต้" />
-      </div>
+      <h1>จำนวนประชากร {data.length} </h1>
+
+      <img
+        src={Thlogo}
+        width={100}
+        onClick={() => setShow(!show) } 
+        className="cursor-pointer"
+      /> {/*"เมื่อคลิก (onClick) ให้เรียกใช้ฟังก์ชัน setShow เพื่อเปลี่ยนค่า show ไปเป็นค่าที่ตรงกันข้ามกับค่าปัจจุบัน (!show)"*/}
+      {show && (
+        <div className="flex flex-row gap-2 justify-evenly my-4">
+          <img src={thNlogo} width={100} alt="ภาคเหนือ" />
+          <img src={thMNlogo} width={100} alt="ภาคกลาง" />
+          <img src={thESlogo} width={100} alt="ภาคอีสาน" />
+          <img src={thSSlogo} width={100} alt="ภาคใต้" />
+        </div>
+      )}
 
       <Button onClick={() => setShow(!show)}>{show ? "hide" : "show"}</Button>
       <ul>
