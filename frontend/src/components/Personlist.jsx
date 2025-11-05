@@ -18,12 +18,15 @@ const Personlist = () => {
   return (
     <div>
       <h1>จำนวนประชกร {data.length} </h1>
-      <div>
-        <div><img src={Thlogo} width={100} /></div>
-        <div><img src={Thlogo} width={100} /></div>
-      </div> <img src={thNlogo} width={100} />
-      <img src={thMNlogo} width={100} />
-      <img src={thESlogo} width={100} /> <img src={thSSlogo} width={100} />
+      <img src={Thlogo} width={100} alt="แผนที่ประเทศไทย" />
+      <div className="flex flex-row gap-2 justify-center my-4">
+        
+        <img src={thNlogo} width={100} alt="ภาคเหนือ" /> {/* คุณอาจมีโลโก้ซ้ำ ผมใช้ตามที่คุณ import มานะครับ */}
+        <img src={thMNlogo} width={100} alt="ภาคกลาง" />
+        <img src={thESlogo} width={100} alt="ภาคอีสาน" />
+        <img src={thSSlogo} width={100} alt="ภาคใต้" />
+      </div>
+
       <Button onClick={() => setShow(!show)}>{show ? "hide" : "show"}</Button>
       <ul>
         {show &&
