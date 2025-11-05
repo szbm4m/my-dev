@@ -18,8 +18,11 @@ const Personlist = () => {
   return (
     <div>
       <h1>จำนวนประชกร {data.length} </h1>
+      <Button onClick={() => setShow(!show)}>{show ? "hide" : "show"}</Button>
+      {show 
+      }
       <img src={Thlogo} width={100} alt="แผนที่ประเทศไทย" />
-      <div className="flex flex-row gap-2 justify-center my-4">
+      <div className="flex flex-row gap-2 justify-evenly my-4">
         
         <img src={thNlogo} width={100} alt="ภาคเหนือ" /> {/* คุณอาจมีโลโก้ซ้ำ ผมใช้ตามที่คุณ import มานะครับ */}
         <img src={thMNlogo} width={100} alt="ภาคกลาง" />
