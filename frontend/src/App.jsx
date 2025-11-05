@@ -11,7 +11,7 @@ import { paletteOptions } from './theme.js';
 import Header from "./components/Header.jsx";
 import Personlist from "./components/Personlist.jsx";
 import Page from "./Page.jsx";
-import Home from "./pages/Home/Home.jsx"; // 5. ย้าย Home มาไว้ที่นี่
+import Home from "./pages/Home/Home.jsx";
 
 // 6. สร้าง "กล่อง" สำหรับส่งต่อฟังก์ชันสลับโหมด
 export const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
